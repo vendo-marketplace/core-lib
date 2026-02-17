@@ -1,4 +1,4 @@
-package com.vendo.exception;
+package com.vendo.core_lib.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
