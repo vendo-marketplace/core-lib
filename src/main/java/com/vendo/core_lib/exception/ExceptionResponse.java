@@ -55,6 +55,42 @@ public class ExceptionResponse {
         return timestamp;
     }
 
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static class Builder {
+
+        private String message;
+        private Map<String, String> errors;
+        private int code;
+        private String path;
+
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        public Builder errors(Map<String, String> errors) {
+            this.errors = errors;
+            return this;
+        }
+
+        public Builder code(int code) {
+            this.code = code;
+            return this;
+        }
+
+        public Builder path(String path) {
+            this.path = path;
+            return this;
+        }
+
+        public ExceptionResponse build() {
+            return new ExceptionResponse(this.message, this.errors, this.code, this.path);
+        }
+    }
+
     @Override
     public String toString() {
         return "ExceptionResponse{" +
