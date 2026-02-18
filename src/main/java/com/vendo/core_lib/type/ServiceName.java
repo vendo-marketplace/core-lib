@@ -1,10 +1,5 @@
 package com.vendo.core_lib.type;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@Getter
-@AllArgsConstructor
 public enum ServiceName {
 
     USER_SERVICE("user-service"),
@@ -14,4 +9,11 @@ public enum ServiceName {
 
     private final String serviceName;
 
+    ServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
 }
