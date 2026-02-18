@@ -1,25 +1,80 @@
 package com.vendo.core_lib.exception;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.*;
-
 import java.time.Instant;
 import java.util.Map;
+import java.util.Objects;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 public class ExceptionResponse {
 
-    @NonNull
     private String message;
-
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private Map<String, String> errors;
-
     private int code;
     private String path;
     private final Instant timestamp = Instant.now();
 
+    public ExceptionResponse(String message, Map<String, String> errors, int code, String path) {
+        this.message = message;
+        this.errors = errors;
+        this.code = code;
+        this.path = path;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public Map<String, String> getErrors() {
+        return errors;
+    }
+
+    public void setErrors(Map<String, String> errors) {
+        this.errors = errors;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public Instant getTimestamp() {
+        return timestamp;
+    }
+
+    @Override
+    public String toString() {
+        return "ExceptionResponse{" +
+                "message='" + message + '\'' +
+                ", errors=" + errors +
+                ", code=" + code +
+                ", path='" + path + '\'' +
+                ", timestamp=" + timestamp +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        ExceptionResponse that = (ExceptionResponse) o;
+        return code == that.code && Objects.equals(message, that.message) && Objects.equals(errors, that.errors) && Objects.equals(path, that.path) && Objects.equals(timestamp, that.timestamp);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(message, errors, code, path, timestamp);
+    }
 }

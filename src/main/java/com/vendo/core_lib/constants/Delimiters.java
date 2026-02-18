@@ -1,10 +1,8 @@
 package com.vendo.core_lib.constants;
 
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+public final class Delimiters {
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class Delimiters {
+    private Delimiters() {}
 
     public static final String COLON_DELIMITER = ": ";
 
