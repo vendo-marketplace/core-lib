@@ -12,6 +12,8 @@ public class ExceptionResponse {
     private String path;
     private final Instant timestamp = Instant.now();
 
+    public ExceptionResponse() {}
+
     public ExceptionResponse(String message, Map<String, String> errors, int code, String path) {
         this.message = message;
         this.errors = errors;
