@@ -1,0 +1,17 @@
+package com.vendo.core_lib.utils;
+
+public class StringUtils {
+
+    public static boolean contains(String target, String... arr) {
+        for (String value : arr) {
+            if (target.equals(value)) return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isEmpty(String target) {
+        return target == null || target.isEmpty();
+    }
+
+}
