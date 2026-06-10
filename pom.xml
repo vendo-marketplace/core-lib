@@ -5,7 +5,7 @@
 
     <groupId>io.github.vendo-marketplace-be</groupId>
     <artifactId>core-lib</artifactId>
-    <version>4.7.3</version>
+    <version>4.7.4</version>
     <packaging>jar</packaging>
 
     <name>core</name>
