@@ -2,16 +2,20 @@ package com.vendo.core_lib.utils;
 
 public class StringUtils {
 
-    public static boolean contains(String target, String... arr) {
+    public static boolean contains(String str, String... arr) {
         for (String value : arr) {
-            if (target.equals(value)) return true;
+            if (str.equals(value)) return true;
         }
 
         return false;
     }
 
-    public static boolean isEmpty(String target) {
-        return target == null || target.isEmpty();
+    public static boolean isEmpty(String str) {
+        return str == null || str.isEmpty();
+    }
+
+    public static String defaultIfEmpty(String str, String defaultStr) {
+        return isEmpty(str) ? defaultStr : str;
     }
 
 }
