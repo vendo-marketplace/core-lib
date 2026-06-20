@@ -1,5 +1,9 @@
 package com.vendo.core_lib.type;
 
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 public enum ServiceName {
 
     USER_SERVICE("user-service"),
@@ -19,5 +23,9 @@ public enum ServiceName {
 
     public String getServiceName() {
         return serviceName;
+    }
+
+    public static Set<String> getAllNames() {
+        return Arrays.stream(values()).map(ServiceName::getServiceName).collect(Collectors.toSet());
     }
 }
