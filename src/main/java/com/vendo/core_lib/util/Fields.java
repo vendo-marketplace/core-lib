@@ -6,11 +6,11 @@ public final class Fields {
 
     public static String nameOf(Class<?> clazz, String fieldName) {
         try {
-            clas.getDeclaredField(fieldName);
+            clazz.getDeclaredField(fieldName);
             return fieldName;
         } catch (NoSuchFieldException e) {
             throw new IllegalArgumentException(
-                "Field '" + fieldName + "' not found in " + clas.getName()
+                "Field '" + fieldName + "' not found in " + clazz.getName()
             );
         }
     }
