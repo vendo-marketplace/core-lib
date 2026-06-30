@@ -4,7 +4,7 @@ public final class Fields {
 
     private Fields() {}
 
-    public static String nameOf(Class<?> clas, String fieldName) {
+    public static String nameOf(Class<?> clazz, String fieldName) {
         try {
             clas.getDeclaredField(fieldName);
             return fieldName;
