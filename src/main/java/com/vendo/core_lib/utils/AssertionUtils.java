@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.logging.Logger;
 
-public class AssertionUtils {
+public final class AssertionUtils {
 
     private static final Logger LOGGER = Logger.getLogger(AssertionUtils.class.getName() );
 

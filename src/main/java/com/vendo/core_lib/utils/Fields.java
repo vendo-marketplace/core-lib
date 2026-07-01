@@ -1,4 +1,4 @@
-package com.vendo.core_lib.util;
+package com.vendo.core_lib.utils;
 
 public final class Fields {
 
