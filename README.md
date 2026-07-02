@@ -14,10 +14,14 @@
 Add the dependency to your `pom.xml`:
 
 ```xml
-<groupId>io.github.vendo-marketplace-be</groupId>
-<artifactId>core-lib</artifactId>
-<version>latest-version</version>
-<packaging>jar</packaging>
+
+<dependency>
+    <groupId>io.github.vendo-marketplace-be</groupId>
+    <artifactId>core-lib</artifactId>
+    <version>latest-version</version>
+    <packaging>jar</packaging>
+</dependency>
+
 ```
 
 ## Usage
