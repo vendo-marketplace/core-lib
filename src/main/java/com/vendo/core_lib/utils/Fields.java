@@ -1,4 +1,4 @@
-package com.vendo.core_lib.util;
+package com.vendo.core_lib.utils;
 
 import java.util.Arrays;
 
@@ -6,7 +6,7 @@ public final class Fields {
 
     private Fields() {}
 
-    public static String nameOf(Class<?> clazz, String fieldName) {
+    public static String nameOf(String fieldName, Class<?> clazz) {
         try {
             clazz.getDeclaredField(fieldName);
             return fieldName;

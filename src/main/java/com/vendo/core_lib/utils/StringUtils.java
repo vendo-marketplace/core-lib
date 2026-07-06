@@ -1,6 +1,6 @@
 package com.vendo.core_lib.utils;
 
-public class StringUtils {
+public final class StringUtils {
 
     public static boolean contains(String str, String... arr) {
         for (String value : arr) {
