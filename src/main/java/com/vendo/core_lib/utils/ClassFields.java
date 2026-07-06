@@ -20,7 +20,7 @@ public final class ClassFields {
 
     public static String[] getEnumValues(Class<?> clazz) {
         if (clazz == null || !clazz.isEnum()) {
-            throw new IllegalArgumentException("Class is not type of enum.");
+            return new String[0];
         }
         return Arrays.stream(clazz.getEnumConstants())
                 .map(Object::toString)
