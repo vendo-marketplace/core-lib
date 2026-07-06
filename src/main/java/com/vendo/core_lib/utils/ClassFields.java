@@ -2,9 +2,10 @@ package com.vendo.core_lib.utils;
 
 import java.util.Arrays;
 
-public final class Fields {
+public final class ClassFields {
 
-    private Fields() {}
+    private ClassFields() {
+    }
 
     public static String nameOf(String fieldName, Class<?> clazz) {
         try {
@@ -12,14 +13,14 @@ public final class Fields {
             return fieldName;
         } catch (NoSuchFieldException e) {
             throw new IllegalArgumentException(
-                "Field '" + fieldName + "' not found in " + clazz.getName()
+                    "Field '" + fieldName + "' not found in " + clazz.getName() + "."
             );
         }
     }
 
     public static String[] getEnumValues(Class<?> clazz) {
         if (clazz == null || !clazz.isEnum()) {
-            return new String[0];
+            throw new IllegalArgumentException("Class is not type of enum.");
         }
         return Arrays.stream(clazz.getEnumConstants())
                 .map(Object::toString)
