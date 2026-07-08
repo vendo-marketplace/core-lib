@@ -1,6 +1,7 @@
 package com.vendo.core_lib.utils;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -46,6 +47,7 @@ public final class AssertionUtils {
         Field[] fields = dtoClass.getDeclaredFields();
 
         for (Field field : fields) {
+            if (Modifier.isStatic(field.getModifiers())) continue;
             field.setAccessible(true);
 
             try {
