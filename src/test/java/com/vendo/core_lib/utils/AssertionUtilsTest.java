@@ -47,7 +47,7 @@ class AssertionUtilsTest {
     }
 
     @Test
-    void assertFromDoesNotThrowWhenAllFieldsMatch() {
+    void assertFrom_shouldNotThrow_whenAllFieldsMatch() {
         Source source = new Source("Alice", 30);
         Target target = new Target("Alice", 30);
 
@@ -55,7 +55,7 @@ class AssertionUtilsTest {
     }
 
     @Test
-    void assertFromThrowsWhenFieldValueMismatches() {
+    void assertFrom_shouldThrow_whenFieldValueMismatches() {
         Source source = new Source("Alice", 30);
         Target target = new Target("Bob", 30);
 
@@ -67,7 +67,7 @@ class AssertionUtilsTest {
     }
 
     @Test
-    void assertFromThrowsWhenEntityIsMissingField() {
+    void assertFrom_shouldThrow_whenEntityIsMissingField() {
         Source source = new Source("Alice", 30);
         TargetWithExtraField target = new TargetWithExtraField("Alice", "extra");
 
@@ -77,7 +77,7 @@ class AssertionUtilsTest {
     }
 
     @Test
-    void assertFromSkipsFieldsListedInSkipFields() {
+    void assertFrom_shouldSkipFieldsListedInSkipFields() {
         Source source = new Source("Alice", 30);
         Target target = new Target("Bob", 30);
 
@@ -85,7 +85,7 @@ class AssertionUtilsTest {
     }
 
     @Test
-    void assertFromIgnoresStaticFields() {
+    void assertFrom_shouldIgnoreStaticFields() {
         WithStaticField target = new WithStaticField("Alice");
         Source source = new Source("Alice", 30);
 

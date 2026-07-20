@@ -9,17 +9,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 class CollectionUtilsTest {
 
     @Test
-    void isEmptyReturnsTrueForNull() {
+    void isEmpty_shouldReturnTrueForNull() {
         assertThat(CollectionUtils.isEmpty(null)).isTrue();
     }
 
     @Test
-    void isEmptyReturnsTrueForEmptyCollection() {
+    void isEmpty_shouldReturnTrueForEmptyCollection() {
         assertThat(CollectionUtils.isEmpty(List.of())).isTrue();
     }
 
     @Test
-    void isEmptyReturnsFalseForNonEmptyCollection() {
+    void isEmpty_shouldReturnFalseForNonEmptyCollection() {
         assertThat(CollectionUtils.isEmpty(List.of("a"))).isFalse();
     }
 }

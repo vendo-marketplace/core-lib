@@ -12,14 +12,14 @@ class ServiceNameTest {
 
     @ParameterizedTest
     @EnumSource(ServiceName.class)
-    void getServiceNameReturnsKebabCaseNameMatchingConstant(ServiceName serviceName) {
+    void getServiceName_shouldReturnKebabCaseNameMatchingConstant(ServiceName serviceName) {
         String expected = serviceName.name().toLowerCase().replace('_', '-');
 
         assertThat(serviceName.getServiceName()).isEqualTo(expected);
     }
 
     @Test
-    void getAllNamesReturnsEveryServiceNameValue() {
+    void getAllNames_shouldReturnEveryServiceNameValue() {
         Set<String> allNames = ServiceName.getAllNames();
 
         assertThat(allNames).containsExactlyInAnyOrder(
@@ -35,7 +35,7 @@ class ServiceNameTest {
     }
 
     @Test
-    void getAllNamesSizeMatchesEnumConstantsCount() {
+    void getAllNamesSize_shouldMatchEnumConstantsCount() {
         assertThat(ServiceName.getAllNames()).hasSize(ServiceName.values().length);
     }
 }

@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class DelimitersTest {
 
     @Test
-    void constantsHaveExpectedValues() {
+    void constants_shouldHaveExpectedValues() {
         assertThat(Delimiters.COLON_DELIMITER).isEqualTo(": ");
         assertThat(Delimiters.COMMA_DELIMITER).isEqualTo(", ");
     }

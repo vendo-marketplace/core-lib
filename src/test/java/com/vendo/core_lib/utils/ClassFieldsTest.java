@@ -13,12 +13,12 @@ class ClassFieldsTest {
     }
 
     @Test
-    void nameOfReturnsFieldNameWhenFieldExists() {
+    void nameOf_shouldReturnFieldName_whenFieldExists() {
         assertThat(ClassFields.nameOf("name", Sample.class)).isEqualTo("name");
     }
 
     @Test
-    void nameOfThrowsWhenFieldDoesNotExist() {
+    void nameOf_shouldThrow_whenFieldDoesNotExist() {
         assertThatThrownBy(() -> ClassFields.nameOf("missing", Sample.class))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("missing")
@@ -26,17 +26,17 @@ class ClassFieldsTest {
     }
 
     @Test
-    void getEnumValuesReturnsConstantNamesForEnum() {
+    void getEnumValues_shouldReturnConstantNamesForEnum() {
         assertThat(ClassFields.getEnumValues(ServiceRole.class)).containsExactly("INTERNAL");
     }
 
     @Test
-    void getEnumValuesReturnsEmptyArrayForNonEnumClass() {
+    void getEnumValues_shouldReturnEmptyArray_forNonEnumClass() {
         assertThat(ClassFields.getEnumValues(Sample.class)).isEmpty();
     }
 
     @Test
-    void getEnumValuesReturnsEmptyArrayForNullClass() {
+    void getEnumValues_shouldReturnEmptyArray_forNullClass() {
         assertThat(ClassFields.getEnumValues(null)).isEmpty();
     }
 }

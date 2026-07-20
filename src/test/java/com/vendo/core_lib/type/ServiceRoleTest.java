@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class ServiceRoleTest {
 
     @Test
-    void hasExactlyOneValue() {
+    void values_shouldHaveExactlyOneValue() {
         assertThat(ServiceRole.values()).containsExactly(ServiceRole.INTERNAL);
     }
 }
