@@ -30,7 +30,8 @@ class ServiceNameTest {
                 "notification-service",
                 "aws-service",
                 "indexer-service",
-                "search-service"
+                "search-service",
+                "auto-search-service"
         );
     }
 

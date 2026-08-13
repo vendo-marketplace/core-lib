@@ -13,7 +13,8 @@ public enum ServiceName {
     NOTIFICATION_SERVICE("notification-service"),
     AWS_SERVICE("aws-service"),
     INDEXER_SERVICE("indexer-service"),
-    SEARCH_SERVICE("search-service");
+    SEARCH_SERVICE("search-service"),
+    AUTO_SEARCH_SERVICE("auto-search-service");
 
     private final String serviceName;
 
