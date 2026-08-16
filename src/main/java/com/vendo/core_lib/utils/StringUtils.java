@@ -14,6 +14,16 @@ public final class StringUtils {
         return str == null || str.isEmpty();
     }
 
+    public static boolean isNotEmptyAll(String... strs) {
+        for (String str : strs) {
+            if (isEmpty(str)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static String defaultIfEmpty(String str, String defaultStr) {
         return isEmpty(str) ? defaultStr : str;
     }
