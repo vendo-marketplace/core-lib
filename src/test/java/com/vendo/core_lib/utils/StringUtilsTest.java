@@ -37,22 +37,22 @@ class StringUtilsTest {
     }
 
     @Test
-    void isNotEmptyAll_shouldReturnTrueWhenAllStringsPresent() {
+    void isNotEmptyAll_shouldReturnTrue_whenAllStringsPresent() {
         assertThat(StringUtils.isNotEmptyAll("a", "b", "c")).isTrue();
     }
 
     @Test
-    void isNotEmptyAll_shouldReturnFalseWhenOneStringIsNull() {
+    void isNotEmptyAll_shouldReturnFalse_whenOneStringIsNull() {
         assertThat(StringUtils.isNotEmptyAll("a", null, "c")).isFalse();
     }
 
     @Test
-    void isNotEmptyAll_shouldReturnFalseWhenOneStringIsBlank() {
+    void isNotEmptyAll_shouldReturnFalse_whenOneStringIsBlank() {
         assertThat(StringUtils.isNotEmptyAll("a", "b", "")).isFalse();
     }
 
     @Test
-    void isNotEmptyAll_shouldReturnTrueWhenNoStringsPassed() {
+    void isNotEmptyAll_shouldReturnTrue_whenNoStringsPassed() {
         assertThat(StringUtils.isNotEmptyAll()).isTrue();
     }
 
