@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public final class ClassFields {
 
-    private ClassFields() {
-    }
+    private ClassFields() {}
 
     public static String nameOf(String fieldName, Class<?> clazz) {
         try {

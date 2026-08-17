@@ -4,6 +4,8 @@ import java.util.function.Supplier;
 
 public final class FuncUtils {
 
+    private FuncUtils() {}
+
     public static <T> T notNull(Supplier<T> supplier, Supplier<? extends RuntimeException> exception) {
         T value = supplier.get();
 

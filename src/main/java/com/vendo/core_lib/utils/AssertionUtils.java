@@ -9,6 +9,8 @@ import java.util.logging.Logger;
 
 public final class AssertionUtils {
 
+    private AssertionUtils() {}
+
     private static final Logger LOGGER = Logger.getLogger(AssertionUtils.class.getName() );
 
     public static void assertFrom(Object entity, Object target) {
