@@ -5,6 +5,10 @@ public final class StringUtils {
     private StringUtils() {}
 
     public static boolean contains(String str, String... arr) {
+        if (arr == null) {
+            return false;
+        }
+
         for (String value : arr) {
             if (str.equals(value)) return true;
         }
@@ -17,6 +21,10 @@ public final class StringUtils {
     }
 
     public static boolean isNotEmptyAll(String... strs) {
+        if (strs == null) {
+            return false;
+        }
+
         for (String str : strs) {
             if (isEmpty(str)) {
                 return false;
