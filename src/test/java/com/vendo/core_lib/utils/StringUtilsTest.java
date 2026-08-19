@@ -22,6 +22,11 @@ class StringUtilsTest {
     }
 
     @Test
+    void contains_shouldReturnFalse_whenArrayIsNull() {
+        assertThat(StringUtils.contains("a", null)).isFalse();
+    }
+
+    @Test
     void isEmpty_shouldReturnTrueForNull() {
         assertThat(StringUtils.isEmpty(null)).isTrue();
     }
@@ -44,6 +49,11 @@ class StringUtilsTest {
     @Test
     void isNotEmptyAll_shouldReturnFalse_whenOneStringIsNull() {
         assertThat(StringUtils.isNotEmptyAll("a", null, "c")).isFalse();
+    }
+
+    @Test
+    void isNotEmptyAll_shouldReturnFalse_whenParameterIsNull() {
+        assertThat(StringUtils.isNotEmptyAll(null)).isFalse();
     }
 
     @Test
