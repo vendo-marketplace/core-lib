@@ -1,22 +1,22 @@
 package com.vendo.core_lib.annotations.price;
 
-import com.vendo.core_lib.dto.requests.PriceRangeFilterRequest;
+import com.vendo.core_lib.dto.request.PriceRange;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
-class PriceRangeValidator implements ConstraintValidator<ValidPriceRange, PriceRangeFilterRequest> {
+class PriceRangeValidator implements ConstraintValidator<ValidPriceRange, PriceRange> {
 
     @Override
-    public boolean isValid(PriceRangeFilterRequest value, ConstraintValidatorContext context) {
+    public boolean isValid(PriceRange value, ConstraintValidatorContext context) {
 
         if (value == null
-                || value.minPrice() == null
-                || value.maxPrice() == null
+                || value.getMinPrice() == null
+                || value.getMaxPrice() == null
         ) {
             return true;
         }
 
-        return value.maxPrice().compareTo(value.minPrice()) >= 0;
+        return value.getMaxPrice().compareTo(value.getMinPrice()) >= 0;
     }
 
 }
