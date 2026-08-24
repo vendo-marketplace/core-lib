@@ -1,4 +1,4 @@
-package com.vendo.core_lib.response;
+package com.vendo.core_lib.dto.responses;
 
 import java.util.List;
 
