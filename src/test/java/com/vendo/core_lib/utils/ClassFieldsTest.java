@@ -1,6 +1,6 @@
 package com.vendo.core_lib.utils;
 
-import com.vendo.core_lib.type.ServiceRole;
+import com.vendo.core_lib.types.ServiceRole;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

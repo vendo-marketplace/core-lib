@@ -1,4 +1,4 @@
-package com.vendo.core_lib.type;
+package com.vendo.core_lib.types;
 
 import java.util.Arrays;
 import java.util.Set;
