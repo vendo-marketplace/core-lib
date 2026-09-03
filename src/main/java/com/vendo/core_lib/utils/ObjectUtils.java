@@ -2,7 +2,8 @@ package com.vendo.core_lib.utils;
 
 public final class ObjectUtils {
 
-    private ObjectUtils() {}
+    private ObjectUtils() {
+    }
 
     public static boolean isNotNull(Object obj) {
         return obj != null;
@@ -24,5 +25,15 @@ public final class ObjectUtils {
         }
 
         return true;
+    }
+
+    public static boolean isAnyNonNull(Object... objs) {
+        for (Object obj : objs) {
+            if (isNotNull(obj)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
